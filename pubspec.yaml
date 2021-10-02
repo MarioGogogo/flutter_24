@@ -39,6 +39,8 @@ dependencies:
   url_launcher: ^6.0.1
   #路由管理
   get: ^4.3.8
+  #侧滑删除
+  flutter_swipe_action_cell: ^2.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

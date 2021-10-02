@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 20:18:36
- * @LastEditTime: 2021-09-30 22:36:25
+ * @LastEditTime: 2021-10-02 21:02:55
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/common/routes/app_routes.dart
@@ -18,4 +18,5 @@ abstract class AppRoutes {
   static const Lang = '/lang';
   static const Theme = '/theme';
   static const Demo = '/demo';
+  static const QQSideslip = '/qqsideslip';
 }
