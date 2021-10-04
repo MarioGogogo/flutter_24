@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-02 20:58:53
- * @LastEditTime: 2021-10-02 22:55:35
+ * @LastEditTime: 2021-10-03 22:18:53
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/qqSideslip.dart
@@ -19,7 +19,7 @@ class QQSideslipPage extends StatefulWidget {
 }
 
 class _QQSideslipPageState extends State<QQSideslipPage> {
-  List list = List.generate(100, (index) => index);
+  List list = List.generate(20, (index) => index);
 
   late SwipeActionController controller;
 
