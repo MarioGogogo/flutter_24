@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 22:34:19
- * @LastEditTime: 2021-10-04 19:25:11
+ * @LastEditTime: 2021-10-05 23:50:18
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/index.dart
@@ -27,19 +27,44 @@ class DemoPage extends StatelessWidget {
             onTap: () => Get.toNamed("/demo/qqsideslip"),
           ),
           ListTile(
-            title: Text("官方拖拽"),
+            title: Text("仿支付宝功能拖拽"),
             subtitle: Text('Get.toNamed("/demo/draggable")'),
             onTap: () => Get.toNamed("/demo/draggable"),
           ),
           ListTile(
-            title: Text("dragablegridview"),
-            subtitle: Text('Get.toNamed("/demo/darggrid")'),
-            onTap: () => Get.toNamed("/demo/darggrid"),
+            title: Text("上下左右拖拽"),
+            subtitle: Text('Get.toNamed("/demo/reordergrid")'),
+            onTap: () => Get.toNamed("/demo/reordergrid"),
           ),
           ListTile(
             title: Text("上下拖拽组件"),
             subtitle: Text('Get.toNamed("/demo/reorderable")'),
             onTap: () => Get.toNamed("/demo/reorderable"),
+          ),
+          ListTile(
+            title: Text("DraggableGridViewDemo"),
+            subtitle: Text('Get.toNamed("/demo/draggridview")'),
+            onTap: () => Get.toNamed("/demo/draggridview"),
+          ),
+          ListTile(
+            title: Text("动画-scale"),
+            subtitle: Text('Get.toNamed("/demo/scaleAn")'),
+            onTap: () => Get.toNamed("/demo/scaleAn"),
+          ),
+          ListTile(
+            title: Text("动画-scale"),
+            subtitle: Text('Get.toNamed("/demo/offsetAn")'),
+            onTap: () => Get.toNamed("/demo/offsetAn"),
+          ),
+          ListTile(
+            title: Text("头部半圆ui"),
+            subtitle: Text('Get.toNamed("/demo/headui")'),
+            onTap: () => Get.toNamed("/demo/headui"),
+          ),
+          ListTile(
+            title: Text("offset动画"),
+            subtitle: Text('Get.toNamed("/demo/offsetAn")'),
+            onTap: () => Get.toNamed("/demo/offsetAn"),
           ),
         ],
       ),

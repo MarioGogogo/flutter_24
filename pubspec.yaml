@@ -41,7 +41,10 @@ dependencies:
   get: ^4.3.8
   #侧滑删除
   flutter_swipe_action_cell: ^2.1.1
-  
+  #svg
+  flutter_svg: ^0.22.0
+  #拖拽
+  reorderable_grid_view: ^1.1.0-alpha.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +64,8 @@ flutter:
   # 本地图片配置
   assets:
     - lib/images/update.jpg
+    - assets/icons/Drcorona.svg
+    - assets/images/virus.png
   # - images/a_dot_ham.jpeg 
 
   # An image asset can refer to one or more resolution-specific "variants", see

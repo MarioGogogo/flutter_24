@@ -6,14 +6,14 @@ class DraggablePage extends StatefulWidget {
 }
 
 class _DraggablePageState extends State<DraggablePage> {
-  List<String> _items1 = List<String>.generate(10, (it) => 'item $it');
+  List<String> _items1 = List<String>.generate(11, (it) => 'item $it');
   List<String> _items2 = List<String>.generate(10, (it) => 'item $it');
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DraggablePage'),
+        title: Text('仿支付宝功能模块'),
       ),
       body: Column(
         children: <Widget>[
