@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 20:18:36
- * @LastEditTime: 2021-10-05 23:53:48
+ * @LastEditTime: 2021-10-07 11:52:00
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/common/routes/app_routes.dart
@@ -25,7 +25,6 @@ abstract class AppRoutes {
   static const ReorderableGrid = '/reordergrid'; //上下左右
 
   static const DragGridView = '/draggridview';
-  static const ScaleAnimatePage = '/scaleAn';
+  static const ScaleAnimatePage = '/baseAnimation';
   static const HeaderUIPage = '/headui';
-  static const OffsetPage = "/offsetAn";
 }

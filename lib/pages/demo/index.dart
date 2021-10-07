@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 22:34:19
- * @LastEditTime: 2021-10-05 23:50:18
+ * @LastEditTime: 2021-10-07 11:52:51
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/index.dart
@@ -47,24 +47,14 @@ class DemoPage extends StatelessWidget {
             onTap: () => Get.toNamed("/demo/draggridview"),
           ),
           ListTile(
-            title: Text("动画-scale"),
-            subtitle: Text('Get.toNamed("/demo/scaleAn")'),
-            onTap: () => Get.toNamed("/demo/scaleAn"),
-          ),
-          ListTile(
-            title: Text("动画-scale"),
-            subtitle: Text('Get.toNamed("/demo/offsetAn")'),
-            onTap: () => Get.toNamed("/demo/offsetAn"),
+            title: Text("动画-demo"),
+            subtitle: Text('Get.toNamed("/demo/baseAnimation")'),
+            onTap: () => Get.toNamed("/demo/baseAnimation"),
           ),
           ListTile(
             title: Text("头部半圆ui"),
             subtitle: Text('Get.toNamed("/demo/headui")'),
             onTap: () => Get.toNamed("/demo/headui"),
-          ),
-          ListTile(
-            title: Text("offset动画"),
-            subtitle: Text('Get.toNamed("/demo/offsetAn")'),
-            onTap: () => Get.toNamed("/demo/offsetAn"),
           ),
         ],
       ),

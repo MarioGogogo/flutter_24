@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //获取服务器版本
       var serviceVersion = data.version;
       var serviceVersionName =
-      Platform.isIOS ? 'iOS_$serviceVersion' : 'android_$serviceVersion';
+          Platform.isIOS ? 'iOS_$serviceVersion' : 'android_$serviceVersion';
       if (this.vInfo == serviceVersionName) {
         //验证通过
         // _goNextPage();
@@ -154,14 +154,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ]),
             ),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('取消'),
-                textColor: Colors.grey,
                 onPressed: () => Navigator.of(context).pop(), // 关闭对话框
               ),
-              FlatButton(
+              TextButton(
                 child: Text('更新'),
-                textColor: Colors.blue,
                 onPressed: () async {
                   if (Platform.isAndroid) {
                     //安卓应用内下载
@@ -188,9 +186,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // destinationFilename 是对下载的apk进行重命名
       OtaUpdate()
           .execute(serviceVersion.androidAddress,
-          destinationFilename: 'news123.apk')
+              destinationFilename: 'news123.apk')
           .listen(
-            (OtaEvent event) {
+        (OtaEvent event) {
           print('status:${event.status},value:${event.value}');
           switch (event.status) {
             case OtaStatus.DOWNLOADING: // 下载中
@@ -229,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
       try {
         // destinationFilename 是对下载的apk进行重命名
         OtaUpdate().execute(url, destinationFilename: 'news.apk').listen(
-              (OtaEvent event) {
+          (OtaEvent event) {
             print('status:${event.status},value:${event.value}');
             switch (event.status) {
               case OtaStatus.DOWNLOADING: // 下载中

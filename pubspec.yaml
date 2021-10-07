@@ -44,7 +44,7 @@ dependencies:
   #svg
   flutter_svg: ^0.22.0
   #拖拽
-  reorderable_grid_view: ^1.1.0-alpha.4
+  reorderable_grid_view: ^1.2.0-alpha.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

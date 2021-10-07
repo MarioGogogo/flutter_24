@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-26 21:55:20
- * @LastEditTime: 2021-09-27 22:23:38
+ * @LastEditTime: 2021-10-07 10:44:07
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/components/LoadingDialog.dart
@@ -18,8 +18,7 @@ class LoadingDialog extends Dialog {
   LoadingDialog({this.content});
 
   _showTimer(context) {
-    var timer;
-    timer = Timer.periodic(Duration(milliseconds: 3000), (t) {
+    Timer.periodic(Duration(milliseconds: 3000), (t) {
       Navigator.pop(context);
       t.cancel();
     });
