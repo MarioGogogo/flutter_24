@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 22:34:19
- * @LastEditTime: 2021-10-07 11:52:51
+ * @LastEditTime: 2021-10-07 19:43:56
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/index.dart
@@ -55,6 +55,11 @@ class DemoPage extends StatelessWidget {
             title: Text("头部半圆ui"),
             subtitle: Text('Get.toNamed("/demo/headui")'),
             onTap: () => Get.toNamed("/demo/headui"),
+          ),
+          ListTile(
+            title: Text("电影滚动视差"),
+            subtitle: Text('Get.toNamed("/demo/movescroll")'),
+            onTap: () => Get.toNamed("/demo/movescroll"),
           ),
         ],
       ),

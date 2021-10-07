@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 20:19:04
- * @LastEditTime: 2021-10-07 11:52:10
+ * @LastEditTime: 2021-10-07 19:56:57
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/common/routes/app_pages.dart
@@ -11,6 +11,7 @@ import 'package:flutter_24/pages/animation/demo.dart';
 import 'package:flutter_24/pages/demo/dargGrid.dart';
 import 'package:flutter_24/pages/demo/draggable.dart';
 import 'package:flutter_24/pages/demo/index.dart';
+import 'package:flutter_24/pages/demo/movie.dart';
 import 'package:flutter_24/pages/demo/qqSideslip.dart';
 import 'package:flutter_24/pages/demo/reorderable.dart';
 import 'package:flutter_24/pages/demo/reorderableGridView.dart';
@@ -82,6 +83,10 @@ class AppPages {
       GetPage(
         name: AppRoutes.HeaderUIPage,
         page: () => HeaderUIPage(),
+      ),
+      GetPage(
+        name: AppRoutes.MovieScrollPage,
+        page: () => MovieScrollPage(),
       ),
     ]),
 

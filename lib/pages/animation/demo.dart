@@ -1,9 +1,9 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-05 15:52:29
- * @LastEditTime: 2021-10-07 14:33:07
+ * @LastEditTime: 2021-10-07 16:53:39
  * @LastEditors: MarioGo
- * @Description: 文件描述
+ * @Description: 计时器
  * @FilePath: /flutter_24/lib/pages/animation/demo.dart
  * 可以输入预定的版权声明、个性签名、空行等
  */
@@ -18,10 +18,10 @@ class ScaleAnimationPage extends StatefulWidget {
 }
 
 class _ScaleAnimationPageState extends State<ScaleAnimationPage> {
-  late int _counter = 0;
+  int _counter = 0;
   _onClick() {
     setState(() {
-      _counter = _counter + 1;
+      _counter++;
     });
     print("点击");
   }
@@ -36,20 +36,21 @@ class _ScaleAnimationPageState extends State<ScaleAnimationPage> {
           child: Container(
               width: 300,
               height: 120,
+              color: Colors.blue,
               child: Row(
                 children: [
                   AnimatedCounter(
-                    value: 1,
-                    duration: Duration(seconds: 1),
+                    value: _counter,
+                    duration: Duration(seconds: 2),
                   ),
-                  AnimatedCounter(
-                    value: 2,
-                    duration: Duration(seconds: 1),
-                  ),
-                  AnimatedCounter(
-                    value: 3,
-                    duration: Duration(seconds: 1),
-                  ),
+                  // AnimatedCounter(
+                  //   value: 2,
+                  //   duration: Duration(seconds: 1),
+                  // ),
+                  // AnimatedCounter(
+                  //   value: 3,
+                  //   duration: Duration(seconds: 1),
+                  // ),
                 ],
               ))),
       floatingActionButton: FloatingActionButton(
@@ -70,21 +71,19 @@ class AnimatedCounter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    late double whole;
-    late double decimal;
     return TweenAnimationBuilder(
       duration: duration,
       tween: Tween(end: value.toDouble()),
-      builder: (BuildContext context, value, child) {
-        print("object$value");
-        whole = 1;
-        decimal = 0.44; // this.value - 10;
+      builder: (BuildContext context, value, Widget? child) {
+        final val = value as double;
+        final int whole = val ~/ 1;
+        final double decimal = val - whole; // this.value - 10;
         return Stack(
           children: [
             Positioned(
                 top: decimal * 100, //1.0 --- 0.0,
                 child: Opacity(
-                  opacity: 1.0 - decimal,
+                  opacity: 1.0 - decimal, // 1 ---- 0 隐藏
                   child: Text(
                     "$whole",
                     style: TextStyle(fontSize: 100),
@@ -93,9 +92,9 @@ class AnimatedCounter extends StatelessWidget {
             Positioned(
                 top: 100 - (decimal * 100), //100 - 0
                 child: Opacity(
-                  opacity: 1.0 - decimal,
+                  opacity: decimal, // 0 --- 1
                   child: Text(
-                    "$whole",
+                    "${whole + 1}",
                     style: TextStyle(fontSize: 100),
                   ),
                 )),

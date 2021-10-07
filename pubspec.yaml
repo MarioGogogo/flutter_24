@@ -66,6 +66,9 @@ flutter:
     - lib/images/update.jpg
     - assets/icons/Drcorona.svg
     - assets/images/virus.png
+    - assets/poster_nuhuo.webp
+    - assets/poster_dune.jpg
+    - assets/poster_speed9.jpg
   # - images/a_dot_ham.jpeg 
 
   # An image asset can refer to one or more resolution-specific "variants", see
