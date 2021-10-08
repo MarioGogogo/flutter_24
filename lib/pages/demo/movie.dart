@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-07 19:43:06
- * @LastEditTime: 2021-10-07 20:48:53
+ * @LastEditTime: 2021-10-08 11:12:44
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/movie.dart
@@ -10,35 +10,50 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_24/components/sliding_card.dart';
 import 'package:flutter_24/models/movieData.dart';
+import 'package:get/get.dart';
 
 class MovieScrollPage extends StatelessWidget {
-  const MovieScrollPage({Key? key}) : super(key: key);
+  MovieScrollPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("电影视差"),
-      ),
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(40),
+    return WillPopScope(
+      onWillPop: () async {
+        if ("1" == "1") {
+          return true;
+        }
+        return true;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("电影视差"),
+          leading: IconButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                Get.back(result: {"success": true});
+              },
+              icon: Icon(Icons.face)),
+        ),
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(40),
 
-              /// 导航栏标题
-              child: Text(
-                '正在热播',
-                style: TextStyle(
-                  fontSize: 34,
-                  fontWeight: FontWeight.w600,
+                /// 导航栏标题
+                child: Text(
+                  '正在热播',
+                  style: TextStyle(
+                    fontSize: 34,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
-            ),
-            SlidingContainer(),
-          ],
+              SlidingContainer(),
+            ],
+          ),
         ),
       ),
     );

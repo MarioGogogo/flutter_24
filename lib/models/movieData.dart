@@ -1,13 +1,3 @@
-/*
- * @Author: MarioGo
- * @Date: 2021-10-07 19:48:08
- * @LastEditTime: 2021-10-07 19:48:08
- * @LastEditors: MarioGo
- * @Description: 文件描述
- * @FilePath: /flutter_24/lib/models/movieData.dart
- * 可以输入预定的版权声明、个性签名、空行等
- */
-
 class Movie {
   /// 名称
   final String name;

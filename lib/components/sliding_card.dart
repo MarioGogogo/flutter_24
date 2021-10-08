@@ -3,7 +3,7 @@
 
 import 'package:flutter_24/models/movieData.dart';
  * @Date: 2021-10-07 19:58:59
- * @LastEditTime: 2021-10-07 20:54:18
+ * @LastEditTime: 2021-10-08 10:26:54
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/components/sliding_card.dart
@@ -80,7 +80,51 @@ class SlidingCard extends StatelessWidget {
                           // shape: RoundedRectangleBorder(
                           //   borderRadius: BorderRadius.circular(32),
                           // ),
-                          onPressed: () {},
+                          onPressed: () {
+                            //这里测试 snackbar
+                            //新api
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              backgroundColor: Colors.blue,
+                              content: Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.check,
+                                    color: Colors.red,
+                                  ),
+                                  SizedBox(
+                                    width: 6,
+                                  ),
+                                  Text(
+                                    '购买成功了',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              duration: const Duration(seconds: 3),
+                              action: SnackBarAction(
+                                textColor: Colors.white,
+                                label: '知道了',
+                                onPressed: () {},
+                              ),
+                            ));
+
+                            //旧api
+                            // Scaffold.of(context).showSnackBar(SnackBar(
+                            // content: Row(
+                            //   children: <Widget>[
+                            //     Icon(
+                            //       Icons.check,
+                            //       color: Colors.green,
+                            //     ),
+                            //     Text('下载成功')
+                            //   ],
+                            // ),
+                            //   action: SnackBarAction(
+                            //     label: '知道了',
+                            //     onPressed: () {},
+                            //   ),
+                            // ));
+                          },
                         ),
                         Spacer(),
                         Text(

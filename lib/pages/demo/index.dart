@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 22:34:19
- * @LastEditTime: 2021-10-07 19:43:56
+ * @LastEditTime: 2021-10-08 16:42:35
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/index.dart
@@ -60,6 +60,21 @@ class DemoPage extends StatelessWidget {
             title: Text("电影滚动视差"),
             subtitle: Text('Get.toNamed("/demo/movescroll")'),
             onTap: () => Get.toNamed("/demo/movescroll"),
+          ),
+          ListTile(
+            title: Text("事件处理与手势demo"),
+            subtitle: Text('Get.toNamed("/demo/eventhandle")'),
+            onTap: () => Get.toNamed("/demo/eventhandle"),
+          ),
+          ListTile(
+            title: Text("异步ui更新"),
+            subtitle: Text('Get.toNamed("/demo/future")'),
+            onTap: () => Get.toNamed("/demo/future"),
+          ),
+          ListTile(
+            title: Text("购物车-全局状态管理"),
+            subtitle: Text('Get.toNamed("/demo/shoppingpage")'),
+            onTap: () => Get.toNamed("/demo/shoppingpage"),
           ),
         ],
       ),
