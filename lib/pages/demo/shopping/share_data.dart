@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-08 17:25:34
- * @LastEditTime: 2021-10-08 17:32:14
+ * @LastEditTime: 2021-10-08 23:52:06
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/shopping/share_data.dart
@@ -28,6 +28,7 @@ class ShareDataWidget extends InheritedWidget {
   //该回调决定当data发生变化时，是否通知子树中依赖data的Widget
   @override
   bool updateShouldNotify(ShareDataWidget old) {
+    print("${old.data} ,,,,, $data");
     return old.data != data;
   }
 }

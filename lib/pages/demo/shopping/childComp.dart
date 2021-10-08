@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-08 17:23:25
- * @LastEditTime: 2021-10-08 17:41:40
+ * @LastEditTime: 2021-10-09 00:00:15
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/shopping/childComp.dart
@@ -33,7 +33,8 @@ class _ChildCompPageState extends State<ChildCompPage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     //父或祖先widget中的InheritedWidget改变(updateShouldNotify返回true)时会被调用。
-    //如果build中没有依赖InheritedWidget，则此回调不会被调用。
+    // ? 如果build中没有依赖InheritedWidget，则此回调不会被调用。
+    // ! 操作一些成本高昂的操作 比如网络请求 避免每次build执行影响性能
     print(
       "Dependencies change",
     );
