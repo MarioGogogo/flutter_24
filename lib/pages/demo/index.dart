@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 22:34:19
- * @LastEditTime: 2021-10-08 16:42:35
+ * @LastEditTime: 2021-10-09 22:03:50
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/demo/index.dart
@@ -75,6 +75,11 @@ class DemoPage extends StatelessWidget {
             title: Text("购物车-全局状态管理"),
             subtitle: Text('Get.toNamed("/demo/shoppingpage")'),
             onTap: () => Get.toNamed("/demo/shoppingpage"),
+          ),
+          ListTile(
+            title: Text("购物车-EventBus管理"),
+            subtitle: Text('Get.toNamed("/demo/eventbuspage")'),
+            onTap: () => Get.toNamed("/demo/eventbuspage"),
           ),
         ],
       ),

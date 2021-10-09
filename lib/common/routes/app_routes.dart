@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 20:18:36
- * @LastEditTime: 2021-10-08 16:42:07
+ * @LastEditTime: 2021-10-09 22:02:14
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/common/routes/app_routes.dart
@@ -31,4 +31,5 @@ abstract class AppRoutes {
   static const EeventHandlePage = "/eventhandle";
   static const FuturePage = "/future";
   static const ShoppingPage = "/shoppingpage";
+  static const EventBusPage = "/eventbuspage";
 }

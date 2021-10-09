@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-30 20:19:04
- * @LastEditTime: 2021-10-08 16:45:16
+ * @LastEditTime: 2021-10-09 22:02:57
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/common/routes/app_pages.dart
@@ -16,6 +16,7 @@ import 'package:flutter_24/pages/demo/qqSideslip.dart';
 import 'package:flutter_24/pages/demo/reorderable.dart';
 import 'package:flutter_24/pages/demo/reorderableGridView.dart';
 import 'package:flutter_24/pages/demo/shopping/shoppingpage.dart';
+import 'package:flutter_24/pages/eventBus/index.dart';
 import 'package:flutter_24/pages/eventHandler/future.dart';
 import 'package:flutter_24/pages/eventHandler/index.dart';
 import 'package:flutter_24/pages/home/index.dart';
@@ -102,6 +103,10 @@ class AppPages {
       GetPage(
         name: AppRoutes.ShoppingPage,
         page: () => ShoppingPage(),
+      ),
+      GetPage(
+        name: AppRoutes.EventBusPage,
+        page: () => EventBusPage(),
       ),
     ]),
 
