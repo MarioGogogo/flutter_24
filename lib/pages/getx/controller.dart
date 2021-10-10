@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-10 20:51:44
- * @LastEditTime: 2021-10-10 21:54:14
+ * @LastEditTime: 2021-10-10 21:57:14
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/getx/controller.dart
@@ -29,3 +29,5 @@ class User {
 }
 
 // 值得注意的是，因为现在flutter 有了null-safety，所以我们最好给响应式变量一个初始值。
+
+// 假设项目比较小，那Obx可能会比较好，很快很方便，如果是项目比较大，我建议使用GetBuilder会比较好，因为性能会比较好。

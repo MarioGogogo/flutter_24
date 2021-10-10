@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-10 20:11:00
- * @LastEditTime: 2021-10-10 20:53:16
+ * @LastEditTime: 2021-10-10 22:00:10
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /flutter_24/lib/pages/getx/index.dart
@@ -35,6 +35,20 @@ class StateObxView extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 _counter.count++;
+                ScaffoldMessenger.of(context).showMaterialBanner(
+                  MaterialBanner(
+                    content: const Text('这些一个提示Material Banner'),
+                    leading: const Icon(Icons.info),
+                    backgroundColor: Colors.yellow,
+                    actions: [
+                      TextButton(
+                        child: const Text('取消'),
+                        onPressed: () => ScaffoldMessenger.of(context)
+                            .hideCurrentMaterialBanner(),
+                      ),
+                    ],
+                  ),
+                );
               },
               child: Text('add'),
             ),
