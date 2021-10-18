@@ -22,6 +22,27 @@ class CounterController extends GetxController {
 
 // 甚至自定义类 - 可以是任何类
   final user = User().obs;
+
+  void add(){
+    count++;
+    update();
+  }
+
+  void addBalance(){
+    // balance = 0.4;
+    update();
+  }
+
+  void setItem(item){
+    items.add(item);
+    update();
+  }
+
+  void setBalance(balance){
+    balance = balance;
+    update();
+  }
+
 }
 
 class User {

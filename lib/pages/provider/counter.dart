@@ -11,11 +11,28 @@ import 'package:flutter/material.dart';
 
 class Counter with ChangeNotifier {
   int _count = 0;
+  String _name = "";
+  int _age = 99;
+  String _sex = "";
+  List<int> _data = [];
+  List<dynamic> _formatData = [];
+  Object  _info = {};
 
+  int get age => _age;
   int get count => _count;
 
   increment() {
-    _count++;
+       _count++;
+    notifyListeners();
+  }
+
+  setAge(age) {
+    _age = age;
+    notifyListeners();
+  }
+
+  setData() {
+    _data = [1,2,3,4,5];
     notifyListeners();
   }
 }
